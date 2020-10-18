@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>824,1392</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>941,1432</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetTransactionData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -63,28 +63,28 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Obtenha um item de transação de uma fonte especificada (por exemplo, filas do orquestrador, planilhas, bancos de dados, caixas de correio ou APIs da web).&#xD;&#xA;&#xD;&#xA;Se não houver itens de transação restantes, out_TransactionItem é definido como Nothing, o que leva ao estado End Process.&#xD;&#xA;&#xD;&#xA;Para casos em que há apenas uma única transação (ou seja, um processo linear), use uma atividade If para verificar se o argumento in_TransactionNumber tem o valor 1 (o que significa que é a primeira e única transação) e atribua o item de transação a out_TransactionItem. Para qualquer outro valor de in_TransactionNumber, out_TransactionItem deve ser definido como Nothing.&#xD;&#xA;&#xD;&#xA;Se houver várias transações, use o argumento in_TransactionNumber como um índice para recuperar a transação correta a ser processada. Caso não haja mais transações, é necessário definir out_TransactionItem como Nothing, encerrando o processo." DisplayName="Obter dados de transação" sap:VirtualizedContainerService.HintSize="526,1227" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Obtenha um item de transação de uma fonte especificada (por exemplo, filas do orquestrador, planilhas, bancos de dados, caixas de correio ou APIs da web).&#xA;&#xA;Se não houver itens de transação restantes, out_TransactionItem é definido como Nothing, o que leva ao estado End Process.&#xA;&#xA;Para casos em que há apenas uma única transação (ou seja, um processo linear), use uma atividade If para verificar se o argumento in_TransactionNumber tem o valor 1 (o que significa que é a primeira e única transação) e atribua o item de transação a out_TransactionItem. Para qualquer outro valor de in_TransactionNumber, out_TransactionItem deve ser definido como Nothing.&#xA;&#xA;Se houver várias transações, use o argumento in_TransactionNumber como um índice para recuperar a transação correta a ser processada. Caso não haja mais transações, é necessário definir out_TransactionItem como Nothing, encerrando o processo." DisplayName="Obter dados de transação" sap:VirtualizedContainerService.HintSize="526,1227" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Obtenha um item de transação da fila do orquestrador especificada.&#xD;&#xA;Se as filas não forem usadas neste processo, substitua esta atividade pela lógica apropriada para recuperar os itens da transação.&#xD;&#xA;Por exemplo, se as transações são linhas de uma DataTable, a linha correspondente à transação atual é recuperada neste ponto." DisplayName="Obter item de transação" sap:VirtualizedContainerService.HintSize="484,229" sap2010:WorkflowViewState.IdRef="GetQueueItem_1" QueueType="[in_Config(&quot;OrchestratorQueueName&quot;).ToString]" TransactionItem="[out_TransactionItem]">
+    <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Obtenha um item de transação da fila do orquestrador especificada.&#xA;Se as filas não forem usadas neste processo, substitua esta atividade pela lógica apropriada para recuperar os itens da transação.&#xA;Por exemplo, se as transações são linhas de uma DataTable, a linha correspondente à transação atual é recuperada neste ponto." DisplayName="Obter item de transação" sap:VirtualizedContainerService.HintSize="484,229" sap2010:WorkflowViewState.IdRef="GetQueueItem_1" QueueType="[in_Config(&quot;OrchestratorQueueName&quot;).ToString]" TransactionItem="[out_TransactionItem]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetQueueItem>
-    <If sap2010:Annotation.AnnotationText="Esta etapa opcional pode ser usada para incluir mais informações sobre um item de transação e é usada principalmente para fins de registro e visualização.&#xD;&#xA;Por exemplo, se os itens de transação são faturas, out_TransactionID pode ser o número da fatura, out_TransactionField1 pode ser a data da fatura e out_TransactionField2 pode ser o valor da fatura." Condition="[out_TransactionItem isNot Nothing]" DisplayName="Se um novo item de transação for recuperado, obtenha informações adicionais sobre ele" sap:VirtualizedContainerService.HintSize="484,629" sap2010:WorkflowViewState.IdRef="If_1">
+    <If sap2010:Annotation.AnnotationText="Esta etapa opcional pode ser usada para incluir mais informações sobre um item de transação e é usada principalmente para fins de registro e visualização.&#xA;Por exemplo, se os itens de transação são faturas, out_TransactionID pode ser o número da fatura, out_TransactionField1 pode ser a data da fatura e out_TransactionField2 pode ser o valor da fatura." Condition="[out_TransactionItem isNot Nothing]" DisplayName="Se um novo item de transação for recuperado, obtenha informações adicionais sobre ele" sap:VirtualizedContainerService.HintSize="484,629" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap2010:Annotation.AnnotationText="Write data to the added log fields that identify the transaction." DisplayName="Adicionar informações de transação aos campos de registro" sap:VirtualizedContainerService.HintSize="304,394" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence sap2010:Annotation.AnnotationText="Grave dados nos campos de log adicionados que identificam a transação." DisplayName="Adicionar informações de transação aos campos de registro" sap:VirtualizedContainerService.HintSize="304,394" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
