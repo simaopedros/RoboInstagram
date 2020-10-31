@@ -1,1 +1,1 @@
-When a System Error is thrown in the process, a screenshot is taken and saved to Exception_Screenshots folder.
+Quando um erro de sistema é lançado no processo, uma captura de tela é tirada e salva na pasta Exception_Screenshots.

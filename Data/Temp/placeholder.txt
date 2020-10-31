@@ -1,1 +1,1 @@
-Temp folder should store the files while they are being processed. Once the processing part is done, the files should be removed from this folder.
+A pasta Temp deve armazenar os arquivos enquanto eles estão sendo processados. Uma vez finalizada a parte do processamento, os arquivos devem ser removidos desta pasta.
