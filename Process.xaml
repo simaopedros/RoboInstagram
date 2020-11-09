@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1186,1016</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1186,980</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -84,7 +84,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Chame as etapas principais do processo de negócios, que geralmente são implementadas por vários subfluxos de trabalho.&#xA;&#xA;Se uma BusinessRuleException for lançada, a transação será ignorada.&#xA;Se outro tipo de exceção ocorrer, a transação atual pode ser repetida." DisplayName="Process" sap:VirtualizedContainerService.HintSize="1196,811" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Chame as etapas principais do processo de negócios, que geralmente são implementadas por vários subfluxos de trabalho.&#xA;&#xA;Se uma BusinessRuleException for lançada, a transação será ignorada.&#xA;Se outro tipo de exceção ocorrer, a transação atual pode ser repetida." DisplayName="Process" sap:VirtualizedContainerService.HintSize="1196,815" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="UsuariosADeixarSeguir" />
     </Sequence.Variables>
@@ -113,10 +113,10 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">40,364.5</av:Point>
-            <av:Size x:Key="ShapeSize">200,66</av:Size>
+            <av:Size x:Key="ShapeSize">200,68</av:Size>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="Sequence - Seguir" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Sequence - Seguir" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -385,10 +385,10 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">410,407</av:Point>
-            <av:Size x:Key="ShapeSize">200,66</av:Size>
+            <av:Size x:Key="ShapeSize">200,68</av:Size>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="Sequence - Ver Stores" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Sequence - Ver Stores" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Int32" Name="ControleStores" />
             <Variable x:TypeArguments="x:Int32" Name="PosicaoStores" />
@@ -1059,10 +1059,10 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">650,407</av:Point>
-            <av:Size x:Key="ShapeSize">200,66</av:Size>
+            <av:Size x:Key="ShapeSize">200,68</av:Size>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="Sequence - Comentar" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="Sequence - Comentar" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="Usuario" />
           </Sequence.Variables>
