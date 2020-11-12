@@ -6,10 +6,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1081,2614</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>851,699</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="29">
+    <scg:List x:TypeArguments="x:String" Capacity="58">
       <x:String>System.Activities.XamlIntegration</x:String>
       <x:String>System.Activities.Validation</x:String>
       <x:String>System.Activities</x:String>
@@ -39,10 +39,11 @@
       <x:String>UiPathTeam.Subtitle.Activities</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="25">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="50">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -68,9 +69,10 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>SubtitleActivity</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Abra os aplicativos usados no processo e execute os procedimentos de inicialização necessários (por exemplo, login)." DisplayName="Inicializar todos os aplicativos" sap:VirtualizedContainerService.HintSize="1091,2409" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Abra os aplicativos usados no processo e execute os procedimentos de inicialização necessários (por exemplo, login)." DisplayName="Inicializar todos os aplicativos" sap:VirtualizedContainerService.HintSize="509,494" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="Navegador" />
     </Sequence.Variables>
@@ -80,14 +82,14 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <usa:DisplaySubtitleActivity ContinueOnError="{x:Null}" BackgroundColor="Black" BackgroundOpacity="0.8" DisplayName="Display Subtitle" DurationMS="100" FontSize="38" sap:VirtualizedContainerService.HintSize="1049,22" sap2010:WorkflowViewState.IdRef="DisplaySubtitleActivity_1" Message="Abrindo Aplicativos" TextColor="White" />
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="1049,2093" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[out_Navegador]" Url="https://www.instagram.com/">
+    <usa:DisplaySubtitleActivity ContinueOnError="{x:Null}" BackgroundColor="Black" BackgroundOpacity="0.8" DisplayName="Display Subtitle" DurationMS="100" FontSize="38" sap:VirtualizedContainerService.HintSize="467,22" sap2010:WorkflowViewState.IdRef="DisplaySubtitleActivity_1" Message="Abrindo Aplicativos" TextColor="White" />
+    <ui:OpenBrowser Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" CommunicationMethod="Native" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="467,167" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[out_Navegador]" Url="https://www.instagram.com/">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1015,1992" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_10">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="Continuar" />
               <Variable x:TypeArguments="x:Boolean" Name="Deslogado" />
@@ -95,7 +97,8 @@
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:UiElementExists DisplayName="Element Exists 'H2'" Exists="[AtivarNotificacao]" sap:VirtualizedContainerService.HintSize="973,106" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
@@ -289,6 +292,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:OpenBrowser>
-    <ui:LogMessage DisplayName="Mensagem de registro (inicializar aplicativos)" sap:VirtualizedContainerService.HintSize="586,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Abrindo aplicativos ...&quot;]" />
+    <ui:LogMessage DisplayName="Mensagem de registro (inicializar aplicativos)" sap:VirtualizedContainerService.HintSize="467,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Abrindo aplicativos ...&quot;]" />
   </Sequence>
 </Activity>
